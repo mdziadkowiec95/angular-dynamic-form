@@ -1,0 +1,11 @@
+<div 
+    class="form-group form-select"
+    [formGroup]="group">
+    <label [for]="config.id">{{ config.label }}</label>
+    <select class="form-control" [formControlName]="config.name" [id]="config.id">
+    <option value="">Select a food</option>
+    <option *ngFor="let option of config.options" [value]="option.value">
+        {{ option.name }}
+    </option>
+    </select>
+</div>

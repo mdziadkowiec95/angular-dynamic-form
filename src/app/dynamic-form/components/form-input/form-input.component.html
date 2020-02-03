@@ -1,0 +1,13 @@
+<div 
+        class="form-group" 
+        [formGroup]="group">
+    <label [for]="config.id">{{ config.label }}</label>
+    <input
+        [id]="config.id"
+        class="form-control"
+        [ngClass]="{ 'is-invalid': group.get(config.name).invalid, 'is-valid': !group.get(config.name).invalid }"
+        type="text"
+        [attr.placeholder]="config.placeholder"
+        [formControlName]="config.name"
+    />
+</div>
